@@ -29,6 +29,10 @@ Es proyecto toma información de unas API's externas y realiza un formateo sobre
 
     El servidor estará disponible en http://localhost:3000.
 
+    o por medio de Docker Compose
+    
+    docker compose up --build 
+
 ## Rutas y Endpoints
     Aquí se describen las rutas y endpoints de tu API. Por ejemplo:
 
