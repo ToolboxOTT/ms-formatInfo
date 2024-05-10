@@ -1,6 +1,6 @@
-# Título del Proyecto
+# MS-formatinfo
 
-Descripción breve y clara del proyecto.
+Es proyecto toma información de unas API's externas y realiza un formateo sobre la información recibida.
 
 ## Tabla de Contenidos
 
