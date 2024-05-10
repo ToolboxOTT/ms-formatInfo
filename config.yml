@@ -1,4 +1,4 @@
-port: 8080
+port: 3000
 urlfiles: 'https://echo-serv.tbxnet.com/v1/secret/files'
 urlfile: 'https://echo-serv.tbxnet.com/v1/secret/file'
 token: 'aSuperSecretKey'
