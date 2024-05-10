@@ -23,7 +23,7 @@ git clone https://github.com/ToolboxOTT/ms-formatInfo.git
 
 npm install
 
-Uso
+## Uso
 Para iniciar el servidor, ejecuta el siguiente comando:
 
 npm start
