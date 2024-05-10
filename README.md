@@ -25,13 +25,13 @@ Es proyecto toma información de unas API's externas y realiza un formateo sobre
 ## Uso
     Para iniciar el servidor, ejecuta el siguiente comando:
 
-    npm start
-
-    El servidor estará disponible en http://localhost:3000.
+    npm start    
 
     o por medio de Docker Compose
     
     docker compose up --build 
+
+    El servidor estará disponible en http://localhost:3000.
 
 ## Rutas y Endpoints
     Aquí se describen las rutas y endpoints de tu API. Por ejemplo:
