@@ -5,7 +5,7 @@ const Readable = require('stream').Readable;
 const csv = require('csv-parser');
 const serviceapi = require('../../domain/services/service-api');
 
-const configYml = yaml.load(fs.readFileSync('./config.yml', 'utf8'));
+const configYml = yaml.load(fs.readFileSync('./src/config.yml', 'utf8'));
 
 exports.processCsvFiles = async (filesList) => {    
     return new Promise(async (resolve, reject) => {

@@ -6,7 +6,7 @@ const yaml = require('js-yaml');
 const csv = require('csv-parser');
 const processFiles = require('../../domain/services/processFiles');
 
-const configYml = yaml.load(fs.readFileSync('./config.yml', 'utf8'));
+const configYml = yaml.load(fs.readFileSync('./src/config.yml', 'utf8'));
 
 exports.GetAll = async (req, res) => {
     magic.LogInfo("Inicio GetAll.......");
