@@ -9,12 +9,18 @@ const yaml = require('js-yaml');
 
 const configYml = yaml.load(fs.readFileSync('./config.yml', 'utf8'));
 
-describe('processFiles', () => {
+describe('Procesando informacion', () => {   
 
-    it('debería retornar "Hola mundo"', async () => {
+    it('debería retornar informacion formateada', async () => {
         try {
             console.log('empieza prueba');
-            const fileData = await serviceapi.makeRequestGet(configYml.urlfiles, configYml.token);
+            const file = 'test15.csv';
+            const data = `
+                            file,text,number,hex
+                            test2.csv,CFuvQ
+                            test2.csv,anNyeeyPGN,726,b9e4e73adc4c98b8284bfc9341185185
+                            `;
+            const fileData = await processFiles.processCsvFile(file, data);
             console.log('Resultado', fileData);
             expect(fileData.length).to.equal(9);
         } catch (error) {
@@ -24,19 +30,6 @@ describe('processFiles', () => {
 
 
     it('debería retornar "Hola mundo"', async () => {
-        const filesList = {
-            "files": [                
-                "test18.csv"
-            ]
-        };
-        console.log('Mensaje de prueba', filesList);
-        const resultado = await processFiles.processCsvFiles(filesList);
-        console.log('Mensaje de prueba', resultado);
-        expect(resultado.length).to.equal(7);
-    });
-
-
-    /*it('debería retornar "Hola mundo"', async () => {
         const filesList = {
             "files": [
                 "test1.csv",
@@ -54,6 +47,6 @@ describe('processFiles', () => {
         const resultado = await processFiles.processCsvFiles(filesList);
         console.log('Mensaje de prueba', resultado);
         expect(resultado.length).to.equal(7);
-    });*/
+    });
     // Agrega más pruebas según sea necesario
 });
