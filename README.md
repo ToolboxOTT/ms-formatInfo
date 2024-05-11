@@ -1,6 +1,6 @@
-# Título del Proyecto
+# MS-formatinfo
 
-Descripción breve y clara del proyecto.
+Es proyecto toma información de unas API's externas y realiza un formateo sobre la información recibida.
 
 ## Tabla de Contenidos
 
@@ -25,18 +25,23 @@ Descripción breve y clara del proyecto.
 ## Uso
     Para iniciar el servidor, ejecuta el siguiente comando:
 
-    npm start
+    npm start    
+
+    o por medio de Docker Compose
+    
+    docker compose up --build 
 
     El servidor estará disponible en http://localhost:3000.
 
 ## Rutas y Endpoints
     Aquí se describen las rutas y endpoints de tu API. Por ejemplo:
 
-    /api/users: Obtiene todos los usuarios.
-    /api/users/:id: Obtiene un usuario específico por su ID.
+    /api/v1/files/data: Obtiene información de un API externa y la reformatea la información recibida.
+    /api/v1/files/data?fileName=test1.csv: se agrega un filtro por queryparam para poder pedir los datos de un archivo especifico.
+    /api/v1/files/list: Obtiene lista de archivos disponibles. 
 
 ## Ejemplos
-    Proporciona ejemplos de cómo usar tu API o cualquier funcionalidad específica. Por ejemplo:
+    Ejemplo de como podemos usar las API's: 
 
     // Ejemplo de solicitud HTTP utilizando fetch API
     fetch('http://localhost:3000/api/v1/files/data')
