@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/_mocha || exit 0",
-    "start": "node src/index.js"
+    "test": "mocha 'src/test/**/*.js'",
+    "start": "node src/index.js"    
   },
   "author": "EAFB",
   "license": "ISC",
@@ -22,6 +22,6 @@
     "mocha": "^10.4.0"
   },
   "mocha": {
-    "timeout": 10000
+    "timeout": 30000
   }
 }

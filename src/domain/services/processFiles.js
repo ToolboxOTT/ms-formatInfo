@@ -7,7 +7,12 @@ const serviceapi = require('../../domain/services/service-api');
 
 const configYml = yaml.load(fs.readFileSync('./src/config.yml', 'utf8'));
 
-exports.processCsvFiles = async (filesList) => {    
+/**
+ * De una lista de nombre de archivo, obtiene su información y la devuelve formateada
+ * @param {string[]} lista - La lista de nombre de los archivos.
+ * @returns {string[]} lista - La lista con la informacion formateada
+ */
+exports.processCsvFiles = (filesList) => {    
     return new Promise(async (resolve, reject) => {
         magic.LogInfo(`Iniciamos procesando los archivo ${filesList}`);        
         const formattedData = [];        
@@ -24,7 +29,7 @@ exports.processCsvFiles = async (filesList) => {
                 }                
             }
         }        
-        resolve(formattedData);
+        resolve(formattedData);        
     });
 }
 
@@ -63,4 +68,7 @@ function processCsvFile(file, data) {
             });
     })
 }
+
+exports.processCsvFile = processCsvFile
+
 
